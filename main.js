@@ -275,7 +275,7 @@ ui: { langBtn: "中文 / EN", pdfBtn: "下载PDF", clickHint: "点击查看详�
   en: {
   brand: "Tianyou Yu · CV",
   name: "Tianyou Yu (于天佑)",
-  subtitle: "Undergraduate · Class of 2023 · Junior · Expected 2027",
+  subtitle: "Undergraduate · Class of 2023 · Junior · Expected Graduation in 2027",
   sidebar: [
     { k: "Location", v: "Beijing, China" },
     { k: "University", v: "Beijing University of Chemical Technology (BUCT)" },
@@ -287,11 +287,11 @@ ui: { langBtn: "中文 / EN", pdfBtn: "下载PDF", clickHint: "点击查看详�
   ],
   nav: {
     edu: "Education",
-    research: "Research",
-    contests: "Contests",
-    work: "Experience",
+    research: "Research Experience",
+    contests: "Competition Experience",
+    work: "Practical Experience",
     skills: "Skills",
-    honors: "Honors",
+    honors: "Honors & Awards",
     about: "Self-Assessment"
   },
   sections: [
@@ -300,72 +300,81 @@ ui: { langBtn: "中文 / EN", pdfBtn: "下载PDF", clickHint: "点击查看详�
       title: "Education",
       items: [
         {
-          title: "Beijing University of Chemical Technology (Project 211) · School of Information Science & Technology · Artificial Intelligence",
+          title: "Beijing University of Chemical Technology (Project 211) | College of Information Science and Technology | Artificial Intelligence",
           right: "2023 — 2027 (Expected)",
           badges: ["GPA 3.66", "Rank 4/60", "CET-4 / CET-6"],
           bullets: [
-            "Key courses: Data Structures, Discrete Mathematics, Digital Signal Processing, Machine Learning, Fundamentals of AI, Pattern Recognition, Neural Networks & Deep Learning, Natural Language Understanding, Image Understanding & Computer Vision, etc.",
-            "Overseas program: Scientific Literacy Development Programme (Nanyang Technological University, Singapore), 2025.07.19 — 2025.07.28; BUCT “Tuohang Program” (9th cohort)"
+            "Major courses: Data Structures, Discrete Mathematics, Digital Signal Processing, Machine Learning, Fundamentals of Artificial Intelligence, Fundamentals of Pattern Recognition, Neural Networks and Deep Learning, Natural Language Understanding, Image Understanding and Machine Vision, etc.",
+            "Overseas exchange: Scientific Literacy Development Programme (Nanyang Technological University, Singapore), 2025.07.19 — 2025.07.28, as part of the 9th BUCT “Tuohang Program” overseas exchange project."
           ]
         }
       ]
     },
     {
       id: "research",
-      title: "Research",
+      title: "Research Experience",
       items: [
         {
           title: "Multi-order Filter Fusion and Triple Contrastive Learning for Attribute Graph Clustering",
-          right: "IJCNN 2026 (CCF-C) · Accepted (Co-first First Author)",
+          right: "IJCNN 2026 (CCF-C, THCPL-B) · Accepted (Co-first Author)",
           badges: ["MT-AGC", "Graph Clustering", "Contrastive Learning", "Topology Augmentation"],
           bullets: [
-            "Project Summary: Proposed MT-AGC (Multi-order Filtering Fusion + Triple Contrastive Learning) for attribute graph clustering to address the over-reliance on observed adjacency matrices in existing deep contrastive graph clustering methods, which often fail to capture attribute-induced global semantic structures under sparse or noisy topology. The framework follows a unified pipeline of “semantically enhanced topology augmentation + self-supervised contrastive learning”: MFF constructs a global semantic graph via attribute similarity, fuses it with the original topology, performs multi-order low-pass filtering on the fused graph, and adaptively fuses multi-scale representations with self-attention; TCL jointly optimizes triple contrastive objectives (representation consistency, structural consistency, and pseudo-label guided semantic matching) and introduces a two-stage high-confidence pseudo-label strategy to progressively inject cluster structure, improving representation quality and clustering robustness. Experiments on 6 public benchmarks show stable and significant improvements.",
-            "My Contribution: First author; designed the overall method and framework, implemented the core MFF/TCL modules, built the experimental pipeline and conducted major experiments/analysis, and led the main writing and figure plotting (Corresponding author: Jipeng Guo).",
-            "Code: https://anonymous.4open.science/status/MT-AGC-CEC2"
+            "Project Summary: Proposed MT-AGC, an attribute graph clustering method based on Multi-order Filtering Fusion and Triple Contrastive Learning, to address the limitation that existing deep contrastive graph clustering methods overly rely on observed adjacency matrices and thus struggle to capture global semantic structures induced by attributes under sparse or noisy topology. The method builds a unified framework of “semantically enhanced topology augmentation + self-supervised contrastive learning.” Specifically, the MFF module constructs a global semantic graph via attribute similarity and fuses it with the original topology, then performs multi-order low-pass filtering on the fused graph and applies self-attention to integrate multi-scale representations. Meanwhile, the TCL objective jointly optimizes representation consistency, structural consistency, and pseudo-label semantic matching, and progressively incorporates clustering structure through a two-stage high-confidence pseudo-label strategy. Experimental results on six public benchmark datasets demonstrate stable and significant performance improvements.",
+            "My Contribution: Co-first author. Responsible for the overall method design and algorithmic framework, implemented the core MFF and TCL modules, built the experimental pipeline and completed the main experimental analysis, and led the writing of the main manuscript and major figure plotting (corresponding author: Jipeng Guo).",
+            "Code: [https://github.com/Sky-Right/MT-AGC]"
           ]
         },
         {
-          title: "CRIC-Net: Calendar-Aware Retrieval and Intent Calibration for E-bike Charging Forecasting",
-          right: "Expert Systems with Applications (ESWA, CAS Q1 Top) · Preparing Submission (Sole First Author)",
-          badges: ["CRIC-Net", "Probabilistic Forecasting", "Calibration", "Retrieval", "SAA Planning"],
+          title: "CRIC-Net: Decision-Oriented Calibrated Forecasting for Sparse User-Level Demand in Resource-Constrained Service Systems",
+          right: "Expert Systems with Applications (ESWA, CAS Q1 Top) · Under Review (Sole First Author)",
+          badges: ["CRIC-Net", "Decision-Oriented Forecasting", "Calibration", "Sparse User-level Demand", "SAA Planning"],
           bullets: [
-            "Project Summary: For day-ahead maintenance planning in shared e-bike charging networks, predicting only total demand is insufficient to capture temporal concentration and tail risk. This project formulates joint distribution forecasting of “whether charging occurs next day” and “time of the first charging event”, and proposes CRIC-Net (Calendar-Aware Retrieval and Intent Calibration Network). CRIC-Net performs calendar-aligned retrieval to fetch similar historical days under the target day’s calendar context to introduce long-range routine evidence; applies a multi-intent capsule mechanism to softly decompose competing behavioral regimes (e.g., routine commuting vs. opportunistic top-ups); and uses entropy-driven temperature scaling to conduct sample-dependent calibration based on intent-mixture entropy, suppressing overconfidence on ambiguous samples while keeping predictions sharp on regular patterns. Experiments on real industrial data show significant gains in both discrimination and calibration, and closed-loop evaluation with Sample Average Approximation (SAA) demonstrates measurable operational benefits by reducing shortage risk and maintenance cost under a fixed budget.",
-            "My Contribution: Sole first author; responsible for problem formulation, method design and implementation, experimental evaluation and closed-loop SAA planning validation, and manuscript writing (Corresponding author: Danhuai Guo).",
-            "Status: Under Review"
+            "Project Summary: This work addresses sparse user-level demand forecasting and risk-sensitive decision-making in resource-constrained service systems by building a joint probabilistic prediction framework for “whether demand occurs” and “the time window of the first event,” and proposes CRIC-Net (Calendar-aware Retrieval and Intent Calibration Network). Going beyond the traditional setting that focuses only on aggregate demand, the study uses shared e-bike charging networks as a representative application and further abstracts the problem to a more general setting of resource allocation and maintenance planning in service systems. The model introduces calendar-aligned periodic retrieval to identify historical segments that are semantically similar in calendar context, thereby incorporating long-range behavioral regularities. It further uses multi-intent capsule decomposition to explicitly model soft mixtures of user behaviors such as commuting routines and temporary intents, together with their switching patterns. In addition, entropy-guided sample-dependent temperature scaling is designed to perform sample-level probabilistic calibration based on intent-mixing uncertainty, suppressing overconfident predictions on behaviorally ambiguous samples. Experiments on real charging data show that the method improves both predictive discrimination and probabilistic reliability, while also reducing capacity-shortage risk and normalized maintenance cost in a rolling Sample Average Approximation (SAA) planning loop.",
+            "My Contribution: Sole first author. Responsible for abstracting the problem from charging-demand forecasting to a decision-oriented probabilistic forecasting problem in resource-constrained service systems, designing the overall method and algorithmic framework, implementing core modules including calendar-aware retrieval, multi-intent capsules, and dynamic calibration, building the prediction evaluation and SAA closed-loop decision-making framework, and completing the main experiments, figure plotting, and manuscript writing (corresponding author: Danhuai Guo).",
+            "Submission Status: Under Review"
           ]
         },
         {
-          title: "Intelligent Monitoring and Recommendation for Charging Networks via Multimodal Adaptive Sensing and Behavioral Analysis | Undergraduate Innovation & Entrepreneurship Training Program",
-          right: "Project Lead (PI)",
+          title: "Dynamic Decision Optimization for Resource Allocation under Finite Resource Competition",
+          right: "Working Paper · In Preparation (Co-first Author)",
+          badges: ["Working Paper", "Resource Allocation", "Decision Optimization", "Game Theory"],
+          bullets: [
+            "Project Summary: Focused on dynamic resource allocation under finite resource competition, this work develops a decision-making model that integrates spatiotemporal supply-demand balance and game-theoretic mechanisms.",
+            "My Contribution: As a co-first author, I am mainly responsible for modeling and experimental advancement, including multi-agent interaction simulation, strategy adjustment, equilibrium solving, and participation in manuscript writing."
+          ]
+        },
+        {
+          title: "Intelligent Monitoring and Recommendation System for Charging Networks via Multimodal Adaptive Perception and Behavioral Analysis | Undergraduate Innovation Training Program",
+          right: "Principal Investigator",
           badges: ["Industry Collaboration", "Signal Modeling", "Game Theory", "Charging Network"],
           bullets: [
-            "Project Summary: Targeting operational monitoring and recommendation decisions in shared charging networks, this industry–academia project (with Lvchongchong IoT Co., Ltd.) leverages real-world complex charging-signal data to explore an integrated modeling framework of “multimodal signal sensing + user behavior modeling + supply–demand game analysis”. On the signal side, we investigate charging-signal representation methods beyond conventional fixed decompositions (e.g., VMD) to better characterize heavy noise and non-stationary patterns; on the mechanism side, we build a two-level supply–demand game between users and chargers to analyze matching dynamics and strategy evolution. Preliminary experiments and validation have been conducted on data from the North 4th Ring Road area, supporting future optimization of monitoring and recommendation strategies with both data-driven and mechanism-based insights.",
-            "My Contribution: Project lead; drove requirement analysis and overall research plan, implemented core algorithms and the experimental workflow, conducted validation and result analysis, handled industry collaboration communication, and drafted the initial paper/manuscript."
+            "Project Summary: In collaboration with Lvchongchong IoT Co., Ltd., this project investigates operational monitoring and recommendation decisions for shared charging networks using real and complex charging data. It explores an integrated modeling framework of “multimodal signal perception + user behavior modeling + supply-demand game analysis.” On the signal-modeling side, the project explores charging-signal representation strategies beyond traditional fixed decomposition methods such as VMD, aiming to improve the modeling of complex noise and non-stationary signals. On the mechanism-modeling side, it develops a two-layer supply-demand game model between users and charging piles to characterize resource matching and strategic evolution, and has completed preliminary experiments and validation on data from the North Fourth Ring Road area, providing a combined data-driven and mechanism-based analytical framework for optimizing monitoring and recommendation strategies in shared charging networks.",
+            "My Contribution: As the project lead, I was responsible for requirement analysis and research plan design, implemented the core algorithms and experimental workflow, carried out model validation and result analysis, coordinated enterprise collaboration, and participated in paper writing."
           ]
         },
         {
-          title: "Magnetically Driven Microrobot: Electromagnetic Actuation Enabled by Advanced Biomimetic Magnetic Membranes | Undergraduate Innovation & Entrepreneurship Training Program",
+          title: "Magnetic Micro-Exploration: Electromagnetically Driven Microrobots Based on Advanced Biomimetic Magnetic Membrane Technology | Undergraduate Innovation Training Program",
           right: "Core Member",
-          badges: ["Microrobot", "Biomimetics", "Magnetic Membrane", "COMSOL"],
+          badges: ["Microrobot", "Biomimetic", "Magnetic Membrane", "COMSOL"],
           bullets: [
-            "Project Summary: Designed an electromagnetically actuated microrobot based on biomimetic magnetic-membrane technology, enabling controllable locomotion via magneto-induced deformation in a radially magnetized membrane structure. The project fabricated the physical prototype and performed electromagnetic actuation tests, and built a coupled COMSOL multiphysics simulation (electromagnetics–structural coupling) to analyze deformation characteristics, mechanical response, and locomotion mechanisms, verifying consistency with biomimetic motion patterns. Experimental observations align well with simulation results, demonstrating the feasibility of the proposed actuation mechanism and microrobot design.",
-            "My Contribution: Contributed to structural design, built the COMSOL multiphysics model and performed parametric analysis, participated in experimental testing and result organization, and assisted in delivering milestone reports and documentation."
+            "Project Summary: This project designs an electromagnetically driven microrobot based on biomimetic magnetic membrane technology. By using a radially magnetized membrane structure, it achieves magnetically induced deformation and controllable locomotion. The project completed the physical construction of the robot and experimental validation of electromagnetic actuation, and established a COMSOL multiphysics coupling simulation model (electromagnetic-structural coupling) to analyze magnetic deformation characteristics, mechanical response, and locomotion mechanisms, while also validating biomimetic movement patterns. The experimental and simulation results showed strong consistency, demonstrating the feasibility of both the actuation mechanism and the robot design.",
+            "My Contribution: Participated in the robot structural design, built the COMSOL multiphysics simulation model and conducted parameter analysis, contributed to the design of the experimental testing process and result organization, and assisted in preparing interim technical reports."
           ]
         }
       ]
     },
     {
       id: "contests",
-      title: "Contests",
+      title: "Competition Experience",
       contests: [
         {
           title: "Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling (MCM/ICM, COMAP)",
           award: "Finalist (Top 1.7%)",
           time: "2025.01.24 — 2025.01.28",
           bullets: [
-            "Track: MCM Track (Problem B; a discrete optimization problem).",
-            "Project Summary: Worked on an open-ended real-world problem released by the organizers, completing an end-to-end modeling pipeline from problem abstraction → assumptions and metrics → model building → algorithm implementation → sensitivity/robustness analysis → interpretable conclusions and recommendations, and submitted a full English paper with figures, comparisons, and conclusions.",
-            "My Contribution: Served as the modeling and writing lead; designed the main solution strategy and derivations, supported key experiments and comparative analyses (e.g., sensitivity and scenario studies), and led the paper structure (Abstract→Methods→Results→Discussion) and figure/table visualization to ensure clarity and reproducibility."
+            "Track: MCM (COMAP) · Problem B | Managing Sustainable Tourism (developing a sustainable tourism management model for Juneau, Alaska, to balance visitor scale, fiscal revenue, community capacity, and the ecological environment).",
+            "Project Summary: Against the background of the tension between “fiscal gains from cruise tourism” and “crowding and environmental degradation” in Juneau—such as glacier retreat at Mendenhall Glacier, carbon emissions, and infrastructure pressure—we collected, cleaned, and visualized high-credibility data from official budget, greenhouse gas emissions, and glacier monitoring sources, and proposed the “Juneau 4P Equation (Policy–Profit–Planet–People)” integrated modeling framework. For Problem 1, we built a multi-objective optimization model combining system dynamics and game theory, with Environmental Sustainability Index (ESI), tourism revenue, and crowding density as the core objectives, under constraints including minimum ESI, visitor capacity, and government investment ratio. We further designed a closed-loop mechanism of “fiscal surplus → reinvestment in environmental protection and public infrastructure → improved carrying capacity,” iteratively simulated the system to convergence, and generated actionable policy and budget-allocation recommendations. Sensitivity analysis was conducted to verify model robustness. For Problem 2, we transferred the model to other overtourism destinations through region-specific parameter calibration, increased ecological vulnerability weights in environmentally sensitive areas, solved Nash equilibria through iterative optimization, and produced generalizable policy recommendations and a one-page memorandum.",
+            "My Contribution: Served as the modeling lead and primary paper writer, responsible for problem abstraction and the indicator system design (ESI / crowding / revenue), deriving and solving the integrated framework of system dynamics, game theory, and multi-objective optimization; participated in data cleaning, parameter boundary setting, and key experiments/sensitivity analysis; and led the English paper structure (Abstract → Methods → Results → Discussion) as well as figure visualization and layout, ultimately producing a one-page policy memo for the Juneau Tourism Board."
           ]
         },
         {
@@ -373,29 +382,29 @@ ui: { langBtn: "中文 / EN", pdfBtn: "下载PDF", clickHint: "点击查看详�
           award: "National Second Prize",
           time: "2024.11 — 2025.08",
           bullets: [
-            "Track: “Intelligent+” · Smart Waste Sorting (automatic identification and classified disposal; focused on system integration and engineering implementation).",
-            "Project Summary: Designed and built a single-inlet smart waste-sorting device that automatically recognizes multiple categories of municipal waste, performs classified disposal, and provides status display/interaction; the system typically includes sensing/vision recognition, actuators (sorting/compression), control logic, and UI, and was evaluated through on-site task workflows.",
-            "My Contribution: Designed the end-to-end vision recognition pipeline (data processing, model selection, and training workflow); handled training/tuning, lightweighting and packaging for edge/embedded deployment; integrated recognition-to-control linkage to improve stability and real-time performance; delivered reusable deployment scripts and test cases, and wrote a complete implementation guide that was open-sourced for junior students."
+            "Track: “Intelligent+” Track | Intelligent Household Waste Sorting (automatic recognition and classified disposal, emphasizing system integration and engineering implementation).",
+            "Project Summary: Independently designed and built a single-inlet intelligent waste-sorting device capable of automatically recognizing and sorting multiple categories of urban household waste, as well as displaying system status. The system included perception/vision recognition, actuators (sorting/compression), control modules, and display interaction, and successfully completed classification and demonstration tasks in the on-site workflow.",
+            "My Contribution: Mainly responsible for building the complete vision module. Independently designed the full visual recognition pipeline, including data processing, model selection, and training workflow; handled model training and tuning, lightweight optimization, and deployment packaging for edge AI computing; integrated the recognition-control loop to improve on-site stability and real-time performance; produced reusable deployment scripts and test cases; and documented my implementation experience in a complete open-source guide for younger students at my university."
           ]
         },
         {
-          title: "National Undergraduate Embedded System and Chip Design Competition (Loongson Track)",
+          title: "National Undergraduate Embedded Chip and System Design Competition (Loongson Track)",
           award: "National Third Prize",
           time: "2025.05 — 2025.08",
           bullets: [
-            "Track: Loongson Track · Smart Car (embedded system design and algorithm implementation on a designated platform/processor; emphasized hardware–software co-design and stable on-site operation).",
-            "Project Summary: Built and deployed an end-to-end smart-car system on the Loongson platform for typical tasks such as track recognition, lane following control, and parking/garage maneuvers, integrating perception/sensing, control strategies, and engineering deployment; performance was evaluated by speed, stability, and task completion on site.",
-            "My Contribution: As the first team in our university to choose the Loongson track and this topic without prior references, we pioneered the solution from scratch: built and optimized a classical vision pipeline (feature extraction, localization, and anti-interference processing), refined lane-following and parking strategies and controller tuning, and completed deployment and on-site debugging (bottleneck diagnosis, stability hardening, and automated configuration) to ensure reliable operation on Loongson 99 Pi and related platforms."
+            "Topic Direction: Intelligent vehicle-assisted driving. Based on the Loongson 2K0300 Jiujiupai development board, the project focused on an Ackermann-steering smart car to complete tasks such as autonomous navigation, lane keeping, and automatic parking, requiring the fusion of vision and LiDAR perception for stable unmanned driving on a designated track. In essence, it was a smart-car competition based on a specified Loongson development board, and after the inaugural edition of this contest, similar Loongson topics were also introduced into other smart-car competitions.",
+            "Project Summary: Built an in-vehicle control system based on ROS, enabling the PC side to connect to the ROS network via WiFi and control the vehicle’s movement and steering. In the visual navigation zone, the camera was used for lane detection, lane keeping, and parking-slot detection; in the fenced area, LiDAR was combined for localization, path planning, and autonomous navigation; and the system ultimately completed tasks such as parallel parking and reverse parking into a garage.",
+            "My Contribution: As a member of the first team from our university to participate in the Loongson track and the first to choose this topic direction, I led the implementation of the vision solution from scratch without inherited experience. I was responsible for the design and optimization of traditional vision algorithms, including track-feature extraction, lane detection, anti-interference processing, and parking-space detection; deeply debugged trajectory tracking, steering control, and parking strategies; and completed key parameter tuning, engineering deployment, and on-site system integration, thereby improving the real-time performance, stability, and task completion capability of the system on the Loongson platform."
           ]
         },
         {
-          title: "Siemens Cup China Intelligent Manufacturing Challenge (Informatization & Networking Track)",
-          award: "Provincial First Prize (North China #2)",
+          title: "Siemens Cup China Intelligent Manufacturing Challenge (Informatization and Networking Track)",
+          award: "Provincial First Prize (2nd Place in North China Division)",
           time: "2025.03 — 2025.07",
           bullets: [
-            "Track: Informatization & Networking (comprehensive assessment of industrial network architecture, communications, and security configuration).",
-            "Project Summary: Designed an industrial networking solution for on-site informatization needs, including network topology and system planning, device interconnection with redundancy/reliability design, and security/access-control configurations; emphasized correctness, deployability, stability, and security.",
-            "My Contribution: Designed the industrial network topology and built the backbone ring network; configured firewall policies (e.g., S615), security-zone segmentation, wireless, VLANs and port mappings; organized joint debugging and fault localization (links, routing, ACL/policy conflicts) to improve availability and robustness. Achieved 92/100 and ranked #2 in North China; did not advance to finals due to a rule constraint (the #1 team was also from our university, scoring 94)."
+            "Track: Informatization and Networking. Based on real industrial scenarios, the competition required teams to independently design a network topology and complete device configuration and system debugging within 80 minutes according to the industrial networking requirements given in the task sheet, with a focus on industrial network architecture design, communication setup, and system reliability.",
+            "Project Summary: Designed an industrial Ethernet topology for industrial production systems and configured SCALANCE industrial switches (such as X408 and X208) and PLCs. Through VLAN partitioning, ring-network redundancy, routing, and access-control strategies, the system achieved stable interconnection and communication among devices, followed by connectivity verification and network fault troubleshooting.",
+            "My Contribution: Responsible for industrial network topology design and backbone ring-network planning. Under strict time constraints, I completed switch and PLC network configuration and debugging, including VLANs, port mapping, communication links, and security-policy setup; organized on-site joint debugging and fault localization (covering links, routing, and policy conflicts); and ensured stable system operation within the competition time. The team ultimately achieved a score of 92/100, ranking 2nd in the North China Division and among the top in the national preliminary round."
           ]
         },
         {
@@ -403,9 +412,9 @@ ui: { langBtn: "中文 / EN", pdfBtn: "下载PDF", clickHint: "点击查看详�
           award: "Provincial Second Prize",
           time: "2025.04 — 2025.05",
           bullets: [
-            "Track: Software Application & Development (software system design and implementation with practical value and demonstrable impact).",
-            "Project Summary: Developed a “Curriculum Standards Analytics System” (a FineReport-based management information system) for teaching management scenarios, providing statistical calculation and visualization of course indicators/attainment, supporting data aggregation, report generation, and decision support.",
-            "My Contribution: Designed and implemented the core database (schema, constraints, indexes, and query optimization); built the authentication and authorization mechanisms (sessions, permission boundaries, and API access control); integrated FineReport data sources and business definitions to ensure consistent, traceable indicator computations."
+            "Track: Software Application and Development (software system design, implementation, and value demonstration for real-world scenarios).",
+            "Project Summary: Developed a “Curriculum Standards Precision Calculation System,” a FineReport-based management information system for teaching administration. The system provides statistical calculation and visualization of course indicators and attainment levels, supporting data aggregation, report generation, and decision-making assistance.",
+            "My Contribution: Responsible for core database design and implementation, including table schema, constraints, indexes, and query optimization; designed and implemented the authentication mechanism, including login state, permission boundaries, and API access control; and integrated FineReport data sources with business definitions to ensure consistency and traceability of indicator calculations."
           ]
         },
         {
@@ -413,54 +422,67 @@ ui: { langBtn: "中文 / EN", pdfBtn: "下载PDF", clickHint: "点击查看详�
           award: "Provincial Second Prize",
           time: "2025.07.30 — 2025.08.02",
           bullets: [
-            "Track/Problem: 2025 Undergraduate Group · Problem C | Monocular-vision-based target measurement device (measuring distance D and size x).",
-            "Project Summary: Designed and built a monocular vision measurement system to estimate target distance and geometric size with real-time display and controlled error. Key components include camera calibration, geometric modeling/pose estimation, real-time measurement, and engineering robustness (FPS, illumination robustness, anti-shake, and edge-case handling).",
-            "My Contribution: Completed the core algorithm development in the first two days (within a 4-day, 3-night sprint) and collaborated with the electrical/control team for integration; led the full AI/vision pipeline design and implementation (calibration, distance and size estimation), implemented most modules for monocular ranging with error analysis and correction, and performed on-site tuning, robustness improvements, and system integration to ensure stable real-time output."
+            "Track/Problem: 2025 Undergraduate Group, Problem C | Monocular vision-based target measurement device. Within a four-day, three-night intensive competition, the team had to complete system design, algorithm development, and full-device debugging to achieve real-time measurement and display of target distance D and object size x, while ensuring measurement accuracy and system stability.",
+            "Project Summary: Built a monocular vision measurement system based on MaixCam. Through camera calibration and geometric modeling, the system estimated target distance and size, and completed real-time image processing and result display. The embedded platform imposed strict requirements on algorithmic real-time performance, measurement error control, and robustness to lighting changes.",
+            "My Contribution: Responsible for the entire vision system and algorithm design and implementation, including camera calibration, target detection and feature extraction, monocular ranging, and size estimation. I completed the major vision functions within the first two days of the competition and integrated them with the electronic control system. In response to OpenCV performance bottlenecks on the MaixCam platform, I conducted debugging and optimization to improve image-processing efficiency in the embedded environment, ensuring stable real-time operation and completion of all required basic measurement functions."
           ]
         }
       ]
     },
-
-
     {
-  id: "work",
-  title: "Experience",
-  items: [
-    {
-      title: "Student Affairs Data Center, BUCT · Information Systems Operations / Development Support",
-      right: "2023.09 — Present",
-      badges: ["Data Ops", "System Development", "Testing", "Deployment"],
-      bullets: [
-        "Worked with student-affairs databases and data definitions (extraction/cleaning/alignment), producing reusable queries and statistics to support analysis and feature iteration.",
-        "Supported the engineering lifecycle of campus student-affairs systems: requirements clarification, API integration, feature development, testing/acceptance, releases, and online issue triage; contributed to modules such as Second Classroom, Work-Study, and Military Training systems, which remain in active use."
+      id: "work",
+      title: "Practical Experience",
+      items: [
+        {
+          title: "Student Affairs Office Data Center | Information System Operations and Maintenance / Assisting in the Development of Campus Student Affairs Systems",
+          right: "2023.09 — Present",
+          badges: ["Data Ops", "System Development", "Testing", "Deployment"],
+          bullets: [
+            "Worked on student-affairs business data and workflows, including connecting to student-affairs databases and standardizing data definitions (extraction / cleaning / alignment), and organized reusable statistical and query outputs to support business analysis and system iteration.",
+            "Assisted in the engineering development and maintenance of campus student-affairs systems, including requirement analysis, API integration, feature development, testing and acceptance, version release, and online issue diagnosis; participated in the development of systems such as the Second Classroom, Work-Study Program, and Military Training, all of which are still in stable use on campus."
+          ]
+        }
       ]
-    }
-  ]
-},
-
+    },
     {
       id: "skills",
       title: "Skills",
       items: [
         {
-          title: "Research",
-          bullets: ["LaTeX typesetting; able to reproduce papers and build experimental codebases using PyTorch and MATLAB."]
-        },
-        {
-          title: "Engineering",
-          bullets: ["Proficient in Python/Java/C/C++/JavaScript; full-stack web development and engineering practice. Experienced with Vue3 for frontend and Flask/SpringBoot for backend development. Familiar with Git workflows (branching/merging, PRs, conflict resolution) for collaborative version control; comfortable with GitHub collaboration."]
-        },
-        {
-          title: "Productivity",
+          title: "Research Skills",
           bullets: [
-            "Proficient with Zotero for literature management and reading; able to write and typeset papers and technical documents with LaTeX. Skilled in Microsoft Office (Word/Excel/PowerPoint) for data organization, report writing, and presentations; capable of building well-structured tables, charts, and polished slides. Experienced with Inkscape for vector illustrations (paper figures, flowcharts, architecture diagrams) and also familiar with Visio/draw.io for engineering and system design diagrams."
+            "Proficient in using LaTeX for academic papers and technical documents, with the ability to independently configure templates, typeset formulas, manage references, and arrange figures and tables.",
+            "Capable of reproducing research code and algorithms, and able to use tools such as PyTorch and MATLAB for paper reproduction, experimental environment setup, and model debugging.",
+            "Possess fundamental experience in machine learning and computer vision experiments, including data processing, experimental design, and result analysis."
+          ]
+        },
+        {
+          title: "Development Skills",
+          bullets: [
+            "Proficient in Python, C/C++, Java, and JavaScript, with solid programming fundamentals and engineering implementation ability.",
+            "Experienced in full-stack web development and capable of independently completing front-end and back-end system design and development.",
+            "Skilled in modern web application development with frameworks such as Vue3, including component-based development, state management, and API integration.",
+            "Familiar with backend frameworks such as Flask and FastAPI, and capable of full-stack development.",
+            "Possess foundational skills in embedded systems and system development, and can develop, debug, and deploy programs in Linux environments.",
+            "Proficient in Git for version control, including branch management, code merging, pull requests, and conflict resolution in team collaboration workflows.",
+            "Familiar with basic GitHub collaboration patterns, including open-source project management, issue tracking, and collaborative development."
+          ]
+        },
+        {
+          title: "Office and Productivity Skills",
+          bullets: [
+            "Proficient in using Zotero for literature retrieval, management, and reading, and able to build a well-organized academic literature database and collaborate with LaTeX for paper writing.",
+            "Skilled in Microsoft Office (Word / Excel / PowerPoint) for technical report writing, data organization, and project presentations.",
+            "Able to use Excel for statistical analysis, spreadsheet modeling, and chart creation.",
+            "Proficient in vector drawing tools such as Inkscape for creating paper illustrations, algorithm flowcharts, and system architecture diagrams.",
+            "Able to use Visio / draw.io to create engineering system diagrams, network topology diagrams, and technical architecture diagrams."
           ]
         }
       ]
     },
     {
       id: "honors",
-      title: "Honors",
+      title: "Honors & Awards",
       items: [
         { title: "Outstanding League Member · National Encouragement Scholarship · Merit Student · Outstanding Student Leader", bullets: [] }
       ]
@@ -470,33 +492,36 @@ ui: { langBtn: "中文 / EN", pdfBtn: "下载PDF", clickHint: "点击查看详�
       title: "Self-Assessment",
       items: [
         {
-          title: "Research",
+          title: "On Research",
           bullets: [
-            "Joined a research group since the second semester of freshman year and maintained a steady rhythm: weekly group meetings/discussions with periodic progress reporting, holding myself to the standard of “build it and explain it clearly”. I have end-to-end research experience and can ramp up quickly in new areas, and I also iterate fast on new ideas.",
-            "Able to sustain careful, detail-oriented work and invest time in scientific writing quality: clearly articulating motivation, experimental settings, and the boundaries of conclusions so others can reproduce and trust the results."
+            "Since the second semester of my freshman year, I have joined a research group and gradually developed a stable research rhythm: regularly attending group meetings and discussions, reporting phased progress, and organizing my ideas, experimental results, and problems clearly before discussing them with my advisor.",
+            "During my undergraduate studies, I have participated in relatively complete research and project processes, which has given me a solid understanding of the basic workflow and pace of academic research. When facing a new research direction, I usually begin with systematic reading of related papers and materials, then gradually build the experimental environment and baseline code, aiming to establish a runnable framework as quickly as possible.",
+            "I hope to pursue a direct Ph.D. in the future and continue engaging in long-term research in artificial intelligence. Beyond pure AI methodology, I am also highly interested in AI for Science and hope to explore applications of AI in biology, chemistry, materials, or environmental science under the guidance of my future advisor."
           ]
         },
         {
-          title: "Capabilities",
+          title: "On Abilities",
           bullets: [
-            "Fast learner with strong transfer ability: start from task requirements, quickly build a minimal runnable loop, and iteratively improve to a deliverable version.",
-            "Strong project execution; very familiar with PyTorch environments and able to quickly reproduce and improve research code.",
-            "Strong collaboration and communication: break complex problems into discussable modules, proactively synchronize risks and progress, respond quickly to teammates’ needs, and use docs/tables/visuals to communicate clearly. I enjoy teamwork."
+            "I have strong learning and transfer abilities. When facing a new research task, I usually first understand the problem requirements, quickly build a minimal runnable experimental pipeline, and then iteratively refine the experimental design and modeling approach on top of it.",
+            "I possess solid research engineering skills and am familiar with deep learning frameworks such as PyTorch, enabling me to reproduce papers, set up experimental environments, debug baseline models, and further conduct method improvements and result analysis.",
+            "I place great importance on teamwork and communication. In collaborative work, I tend to decompose complex problems into smaller, discussable modules, synchronize progress and issues in a timely manner, and organize information through documents, tables, or diagrams to make communication clearer and more efficient.",
+            "I maintain an open attitude toward interdisciplinary research. If a research direction involves domain-specific knowledge—such as biology, materials, or environmental data—I am willing to spend time systematically learning the relevant background and gradually combining domain understanding with AI methods."
           ]
         },
         {
-          title: "Personality",
+          title: "On Personality",
           bullets: [
-            "Outgoing and friendly with strong willingness to communicate (ENFJ): proactively align on goals and drive progress; when disagreements arise, I prefer discussing with facts and experimental evidence rather than intuition.",
-            "Self-motivated and resilient under pressure: when facing deadlines or stacked tasks, I tend to plan and push steadily; after setbacks, I reflect and adjust quickly instead of getting stuck in emotions.",
-            "Care about team culture and contribute actively: happy to share experience and materials to help newcomers ramp up, and also open to feedback and continuous improvement."
+            "I am relatively outgoing and willing to communicate. In a team, I take the initiative to align goals and progress with advisors and teammates, and when disagreements arise, I prefer to discuss them based on experimental results and facts.",
+            "I am self-disciplined and can handle pressure well. When facing research difficulties or failed experiments, I usually first reflect on the reasons and try new ideas rather than giving up easily.",
+            "I genuinely enjoy the process of focusing on one thing over the long term and steadily pushing research forward. If given the opportunity to pursue a Ph.D., I hope to conduct solid research under my advisor’s guidance and contribute meaningfully to the work of the research group."
           ]
         }
       ]
     }
   ],
-ui: { langBtn: "中文 / EN", pdfBtn: "Download PDF", clickHint: "Click to view details" }
+  ui: { langBtn: "中文 / EN", pdfBtn: "Download PDF", clickHint: "Click to view details" }
 }
+
 
 };
 
