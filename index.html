@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tianyou Yu</title>
+  <meta name="description" content="Tianyou Yu (于天佑) · Web CV / Resume" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- Left fixed sidebar -->
+  <aside class="sidebar" aria-label="Profile sidebar">
+    <div class="sidebar-inner">
+      <div class="photo-wrap" aria-label="Profile photo">
+        <img id="photo" src="./assets/photo.jpg" alt="Tianyou Yu photo" />
+      </div>
+
+      <h1 class="name" id="sideName">Tianyou Yu (于天佑)</h1>
+      <p class="subtitle" id="sideSubtitle">本科生 · 2023级 · 2027毕业</p>
+
+      <ul class="meta" id="sideMeta"></ul>
+
+      <div class="sidebar-footer">
+        <div class="pill" id="sideTag">中共党员</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Top sticky nav -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="brand" id="brandName">于天佑 · CV</span>
+      </div>
+
+      <nav class="topnav" aria-label="Sections">
+        <a class="navlink" href="#edu" data-section="edu" id="navEdu">教育经历</a>
+        <a class="navlink" href="#research" data-section="research" id="navResearch">科研经历</a>
+        <a class="navlink" href="#contests" data-section="contests" id="navContests">竞赛经历</a>
+        <a class="navlink" href="#work" data-section="work" id="navWork">学生工作</a>
+        <a class="navlink" href="#skills" data-section="skills" id="navSkills">个人技能</a>
+        <a class="navlink" href="#honors" data-section="honors" id="navHonors">荣誉奖项</a>
+        <a class="navlink" href="#about" data-section="about" id="navAbout">自我评价</a>
+      </nav>
+
+      <div class="topbar-right">
+        <button class="btn ghost" id="langBtn" type="button" aria-label="Toggle language">
+          中文 / EN
+        </button>
+        <a class="btn" id="pdfBtn" href="./assets/resume.pdf" download>
+          下载PDF
+        </a>
+      </div>
+    </header>
+
+    <div class="content" id="contentRoot">
+      <!-- Sections rendered by JS -->
+    </div>
+
+    <footer class="footer">
+      <span id="footerText">Last updated: 2026-03-03</span>
+    </footer>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>
