@@ -7,7 +7,7 @@ const DATA = {
       { k: "城市", v: "Beijing, China" },
       { k: "学校", v: "北京化工大学（BUCT）" },
       { k: "政治面貌", v: "中共党员" },
-      { k: "邮箱", v: "2023040091@buct.edu.cn", link: "mailto:2023040091@buct.edu.cn" },
+      { k: "邮箱", v: "yutianyou@buct.edu.cn", link: "mailto:yutianyou@buct.edu.cn" },
       { k: "ORCID", v: "0009-0001-2390-3603", link: "https://orcid.org/0009-0001-2390-3603" },
       { k: "GitHub", v: "Sky-Right", link: "https://github.com/Sky-Right" },
       { k: "联系方式", v: "13946343018" }
@@ -276,7 +276,7 @@ const DATA = {
       { k: "Location", v: "Beijing, China" },
       { k: "University", v: "Beijing University of Chemical Technology (BUCT)" },
       { k: "Political Status", v: "CPC Member" },
-      { k: "Email", v: "2023040091@buct.edu.cn", link: "mailto:2023040091@buct.edu.cn" },
+      { k: "Email", v: "yutianyou@buct.edu.cn", link: "mailto:yutianyou@buct.edu.cn" },
       { k: "ORCID", v: "0009-0001-2390-3603", link: "https://orcid.org/0009-0001-2390-3603" },
       { k: "GitHub", v: "Sky-Right", link: "https://github.com/Sky-Right" },
       { k: "Contact", v: "13946343018" }
