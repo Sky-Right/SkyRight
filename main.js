@@ -43,7 +43,7 @@ const DATA = {
         items: [
           {
             title: "Multi-order Filter Fusion and Triple Contrastive Learning for Attribute Graph Clustering",
-            right: "IJCNN 2026（CCF-C）· Oral Accepted（共一作者）",
+            right: "IJCNN 2026（CCF-C，THCPL-B）· Oral Accepted（共一作者）",
             badges: ["MT-AGC", "Graph Clustering", "Contrastive Learning", "Topology Augmentation"],
             bullets: [
               "项目简介：提出 MT-AGC（Multi-order Filtering Fusion 和 Triple Contrastive Learning）属性图聚类方法，针对现有深度对比图聚类过度依赖观测邻接矩阵、在拓扑稀疏或噪声场景下难以捕捉由属性诱导的全局语义结构的问题，构建“语义增强拓扑增广 + 自监督对比学习”的统一框架。其中通过 MFF（Multi-order Filtering Fusion）模块利用属性相似度构建全局语义图并与原始拓扑融合，在融合图上执行多阶低通滤波并通过自注意机制实现多尺度表示融合；同时设计 TCL（Triple Contrastive Learning）三重对比学习目标，从表征一致性、结构一致性与伪标签语义匹配三个层面联合优化，并通过 two-stage 高置信伪标签策略逐步引入聚类结构信息，提升模型在稀疏或噪声图结构下的表示能力与聚类性能。在 6 个公开基准数据集上的实验结果表明该方法取得稳定且显著的性能提升。",
